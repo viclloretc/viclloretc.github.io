@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Programación con Vicente</title>
+    <style>
+      ::-webkit-scrollbar {
+        width: 20px;
+        height: 20px;
+      }
+      ::-webkit-scrollbar-track {
+        background: white;
+        border: 2px solid black;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: grey;
+        border: 2px solid black;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+        border: 2px solid black;
+      }
+      body {
+        background-image: url(imágenes/Fondo\ Página\ web.png);
+        color: rgb(0, 0, 0);
+      }
+      .container-all {
+        width: 100%;
+        max-width: 1000px;
+        margin: auto;
+        padding: 60px;
+        background: white;
+        margin-top: 100px;
+        border: 2px solid black;
+        border-top: 4px solid black;
+        border-right: 4px solid black;
+        border-radius: 50px;
+      }
+      .título-índice {
+        text-decoration: none;
+      }
+      img {
+        float: right;
+        max-width: 600px;
+        width: 50%;
+      }
+      a:link,
+      a:visited,
+      a:active {
+        text-decoration: none;
+      }
+      .puntos-índice {
+        color: black;
+        font-size: large;
+      }
+      .puntos-índice:hover {
+        color: red;
+      }
+      .bloque-índice {
+        border: 2px solid black;
+        max-width: max-content;
+        background-color: #d0f0f6;
+        text-align: left;
+        padding: 8px;
+        padding-top: 0px;
+        border-radius: 20px;
+      }
+      p {
+        text-align: justify;
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 1.5;
+      }
+      .referencias {
+        display: list-item;
+        list-style-type: disc;
+        list-style-position: inside;
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 1;
+        color: black;
+      }
+      .bloque-referencias {
+        border: 2px solid black;
+        background-color: #d0f0f6;
+        text-align: left;
+        padding: 8px;
+        padding-top: 0px;
+        border-radius: 20px;
+      }
+      h1 {
+        font-size: 2.5em;
+        text-align: left;
+        font-family: Georgia, "Times New Roman", Times, serif;
+        border-bottom: 2px solid rgb(0, 0, 0);
+      }
+      h2 {
+        font-family: Arial, Hel helvetica, sans-serif;
+        text-decoration: underline 2px;
+        text-underline-offset: 6px;
+      }
+      h3 {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      h4 {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      h5 {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1em;
+      }
+      pre {
+        font-size: 14px;
+      }
+      .vídeo {
+        border-radius: 20px;
+        padding: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-all">
+      <h1>INTRODUCCIÓN A LA PROGRAMACIÓN</h1>
+      <img
+        src="imágenes/lenguajes de programación.jpg"
+        alt="Diagrama con diversos lenguajes de programación"
+      />
+      <div class="bloque-índice">
+        <h2 class="título-índice">Índice</h2>
+
+        <a href="#sección-programación">
+          <p class="puntos-índice">1. ¿Qué es la programación?</p>
+        </a>
+
+        <a href="#sección-algoritmo">
+          <p class="puntos-índice">2. ¿Qué es un algoritmo? Ejemplos</p>
+        </a>
+
+        <a href="#sección-diagrama de flujo">
+          <p class="puntos-índice">3. ¿Qué es un diagrama de flujo?</p>
+        </a>
+
+        <a href="#sección-lenguajes">
+          <p class="puntos-índice">4. Ejemplos de lenguaje de programación</p>
+        </a>
+
+        <a href="#sección-programa">
+          <p class="puntos-índice">
+            5. Ejemplo de programa: Calculadora en Python
+          </p>
+        </a>
+
+        <a href="#sección-conclusión">
+          <p class="puntos-índice">6. Conclusión</p>
+        </a>
+
+        <a href="#sección-referencias">
+          <p class="puntos-índice">7. Referencias</p>
+        </a>
+      </div>
+      <h2 id="sección-programación">¿Qué es la programación?</h2>
+      <p>
+        La programación es el proceso de realizar una computación (o de forma
+        más general, lograr un resultado computacional específico) diseñando o
+        creando un programa informático ejecutable. La programación incluye
+        tareas como el análisis, generar algoritmos, perfilar la precisión y
+        consumo de recursos de los algoritmos, y la implementación de algoritmos
+        (normalmente en un determinado lenguaje de programación). El código
+        fuente de un programa está escrito en uno o más lenguajes que son
+        inteligibles para los programadores, en vez de código máquina, que es el
+        que la unidad central de procesamiento (CPU) ejecuta directamente. El
+        propósito de la programación es buscar una secuencia de instrucciones
+        que automatice la realización de una tarea (que puede ser tan compleja
+        como un sistema operativo) de un ordenador para resolver un problema.
+        Por lo tanto, los programadores necesitan ser expertos en diversos
+        temas, incluyendo el conocimiento del dominio de la aplicación,
+        determinados algoritmos especializados, y lógica matemática.
+      </p>
+      <p>
+        Tareas relacionadas con la programación incluyen el ensayo, la
+        depuración, el mantenimiento del código fuente, la implementación de
+        sistemas de construcción, y la administración de artefactos
+        informáticos. Aunque esto pueda ser considerado parte del proceso de
+        programación, generalmente se emplea el término “desarrollo de software”
+        para este proceso más grande, reservando el término “programación” para
+        la escritura de código. Los ingenieros de software combinan técnicas de
+        ingeniería con prácticas de diseño de software.
+      </p>
+
+      <h2 id="sección-algoritmo">¿Qué es un algoritmo? Ejemplos</h2>
+      <p>
+        Un algoritmo es un conjunto de reglas operatorias cuya aplicación
+        permite resolver un problema formulado mediante un número finito de
+        operaciones. Un algoritmo debe tener tres propiedades; ser finito,
+        definible y generalizable. Lo característico del algoritmo es que
+        transforma cantidades, denominadas magnitudes de entrada o input, en
+        otras cantidades, denominadas magnitudes de salida o output, partiendo
+        de un conjunto bien definido de instrucciones de transformación. Un
+        algoritmo puede traducirse, merced a un lenguaje de programación, en un
+        programa realizable por un ordenador.
+      </p>
+
+      <h3>Minimax</h3>
+      <p>
+        Es un método de decisión para minimizar la pérdida máxima esperada en
+        juegos con adversario y con información perfecta. Su funcionamiento se
+        resume en cómo elegir el mejor movimiento para ti mismo suponiendo que
+        tu contrincante escogerá el peor para ti.
+      </p>
+      <p>
+        Este algoritmo es muy empleado en la programación de juegos como el 3 en
+        raya, el ajedrez, las damas, o el backgammon.
+      </p>
+
+      <h3>PageRank</h3>
+      <p>
+        PageRank es una serie de algoritmos diseñados para optimizar las
+        búsquedas de páginas web. Este algoritmo se basa en el principio de que
+        una página web es relevante si otras páginas web relevantes tienen un
+        enlace a ella. Mediante una serie de cálculos (empleando la gran
+        estructura de enlaces entre páginas de la web) este algoritmo determina
+        qué páginas web son más relevantes.
+      </p>
+      <p>
+        Este algoritmo fue desarrollado por Larry Page y Serguéi Brin en 1999, y
+        sería implementado por ellos mismos en el motor de búsqueda más conocido
+        de la historia: Google.
+      </p>
+
+      <h3>Algoritmos de ordenamiento</h3>
+      <p>
+        Estos algoritmos se encargan de organizar los elementos de un listado
+        según una relación de orden, siendo las más habituales el orden numérico
+        y el orden lexicográfico. Existen numerosos algoritmos de ordenamiento,
+        cada uno con un funcionamiento, complejidad, y eficiencia únicas.
+      </p>
+
+      <h4>Ordenamiento de Burbuja <i>(Bubble sort)</i></h4>
+      <p>
+        Compara cada elemento de la lista a ordenar con el siguiente e
+        intercambia su posición si no están en el orden adecuado. Se revisa
+        varias veces toda la lista hasta que no se necesiten más intercambios.
+        Es uno de los algoritmos más sencillos de implementar. Sin embargo, es
+        de los algoritmos más ineficientes, especialmente para listas muy
+        largas, habiendo otros más rápidos.
+      </p>
+
+      <h4>Ordenamiento por Selección <i>(Selection sort)</i></h4>
+      <p>
+        Se va colocando el elemento más pequeño disponible en cada una de las
+        posiciones de la lista de forma consecutiva. Es un algoritmo muy
+        sencillo, por lo que tiene cierta ventaja sobre algoritmos más
+        complejos. No obstante, para listas muy largas deja de ser eficiente.
+      </p>
+
+      <h4>Ordenamiento Rápido <i>(Quicksort)</i></h4>
+      <p>
+        Se elige un elemento del conjunto (pivote) y se reubica el resto de
+        elementos a cada uno de sus lados, en función de si son mayores o
+        menores que el elemento que estamos tomando como referencia. El
+        procedimiento se repite en cada subconjunto. Este algoritmo es bastante
+        más rápido que los dos anteriores.
+      </p>
+
+      <h4>Más algoritmos de ordenamiento y comparativa entre ellos</h4>
+      <iframe
+        class="vídeo"
+        src="https://www.youtube.com/embed/kPRA0W1kECg"
+        frameborder="0"
+      ></iframe>
+      <iframe
+        class="vídeo"
+        src="https://www.youtube.com/embed/aXXWXz5rF64"
+        frameborder="0"
+      ></iframe>
+      <iframe
+        class="vídeo"
+        src="https://www.youtube.com/embed/es2T6KY45cA"
+        frameborder="0"
+      ></iframe>
+      <h3>Algoritmos de compresión</h3>
+      <p>
+        Son algoritmos que consisten en procedimientos de codificación cuyo
+        objetivo es representar cierta cantidad de información utilizando una
+        menor cantidad de la misma. Su uso principal es la reducción del tamaño
+        de archivos informáticos. Se clasifican en 2 principales grupos.
+      </p>
+
+      <h4>Algoritmos de compresión con pérdida</h4>
+      <p>
+        Estos algoritmos en vez de guardar una copia exacta del archivo
+        original, solo guardan una aproximación. Por lo tanto, es imposible
+        realizar una reconstrucción exacta de los datos originales a partir del
+        archivo comprimido.
+      </p>
+      <p>
+        Este método se emplea principalmente para la compresión de archivos de
+        imagen, vídeo y audio, ya que las aproximaciones que se realizan de los
+        archivos originales se aprovechan de las limitaciones de la percepción
+        humana para esconder la distorsión introducida.
+      </p>
+
+      <h5>JPEG</h5>
+      <p>
+        El JPEG es sin duda uno de los métodos de compresión más conocidos,
+        gracias al cual podemos publicar y visualizar imágenes en redes sociales
+        sin tener largos tiempos de descarga, además de permitirnos almacenar
+        muchas imágenes sin que estas ocupen mucho espacio.
+      </p>
+      <p>
+        Este algoritmo fue desarrollado por el Joint Photographic Experts Group
+        en 1992, comité de cuyas siglas procede el nombre del archivo.
+      </p>
+
+      <h5>MPEG-4 o MP4</h5>
+      <p>
+        El MP4 es el equivalente del JPEG en la compresión de vídeo. Sin este
+        formato de compresión, nos sería imposible visualizar vídeos en línea (a
+        menos que dispusiéramos de una velocidad de internet altísima), los
+        vídeos que tenemos en nuestros móviles nos llenarían el almacenamiento
+        por completo, y para ver o almacenar películas estaríamos obligados a
+        usar discos duros.
+      </p>
+      <p>
+        Este algoritmo fue desarrollado por el Moving Picture Experts Group en
+        1999, comité de cuyas siglas procede el nombre del archivo.
+      </p>
+
+      <h5>MPEG-1 Audio Layer III, MPEG-2 AUDIO LAYER III o MP3</h5>
+      <p>
+        El MP3 es similar al MP4, pero se emplea únicamente para comprimir
+        archivos de audio. Gracias a él podemos almacenar miles de canciones en
+        un solo dispositivo de audio.
+      </p>
+      <p>
+        Fue desarrollado por el Moving Picture Experts Group en 1995, comité de
+        cuyas siglas (al igual que con el MP4) procede el nombre.
+      </p>
+
+      <h4>Algoritmos de compresión sin pérdida</h4>
+      <p>
+        A diferencia de los anteriores, estos algoritmos comprimen los archivos
+        de forma que se pueda realizar una reconstrucción exacta de los datos
+        originales. Es decir, la compresión sin pérdidas engloba a aquellas
+        técnicas que garanticen generar un duplicado exacto del flujo de datos
+        de entrada después de un ciclo de compresión y expansión.
+      </p>
+      <p>
+        Al no haber pérdida de información, se suele emplear este tipo de
+        algoritmos en archivos que contienen datos que no pueden ser degradados
+        o perdidos, como documentos de texto, carpetas, e incluso imágenes y
+        sonido.
+      </p>
+
+      <h5>7z, ZIP y RAR</h5>
+      <p>
+        Estos tres algoritmos son con diferencia los algoritmos de compresión
+        sin pérdida más conocidos. Se especializan en la compresión de datos y
+        archivado. Cada uno de ellos presenta una serie de características que
+        lo hacen únicos, y que por tanto hacen que estos tengan distintas
+        aplicaciones, dependiendo del uso que se quiera hacer de ellos. Por
+        ejemplo, 7z tiene una mayor tasa de compresión y es software libre, ZIP
+        es más rápido y es el estándar en ordenadores, y RAR viene acompañado de
+        un programa (WinRAR) con una interfaz completa y bien diseñada, que nos
+        permite ajustar el nivel de compresión.
+      </p>
+
+      <h5>FLAC</h5>
+      <p>
+        FLAC (Free Lossless Audio Codec) es un algoritmo de compresión de audio.
+        Al no tener pérdida de datos, comprime menos que otros formatos como
+        MP3. Sin embargo, mantiene la calidad de audio original, por lo que está
+        pensado principalmente para producción multimedia.
+      </p>
+      <p>
+        FLAC es un formato libre de uso gratuito que fue desarrollado en 2001
+      </p>
+
+      <h5>PNG</h5>
+      <p>
+        PNG (Portable Network Graphics) es un formato de archivo de imagen que
+        permite compresión de información sin pérdidas. No obstante, por lo que
+        es realmente conocido este formato es porque (además de ofrecer
+        compresión sin pérdidas) permite tener imágenes transparentes.
+      </p>
+      <p>
+        PNG fue desarrollado en 1996 para solventar las deficiencias del formato
+        GIF.
+      </p>
+
+      <h3>Algoritmos de búsqueda</h3>
+      <p>
+        Los algoritmos de búsqueda localizan uno o varios elementos que
+        presenten una serie de propiedades dentro de una estructura de datos.
+        Estos algoritmos tienen numerosas funciones en diversos campos, desde la
+        búsqueda de las rutas más cortas para un vehículo, hasta para buscar una
+        contraseña o combinación de un conjunto completo de posibilidades.
+      </p>
+
+      <h4>Búsqueda secuencial</h4>
+      <p>
+        Se compara el elemento a localizar con cada elemento del conjunto hasta
+        encontrarlo o hasta que se hayan comparado todos.
+      </p>
+      <h4>Búsqueda binaria</h4>
+      <p>
+        En un conjunto de elementos ordenados, se hace una comparación con el
+        elemento ubicado en el medio y, si no son iguales, se continúa la
+        búsqueda en la mitad donde pueda estar. Y así sucesivamente en
+        intervalos cada vez más pequeños de elementos.
+      </p>
+
+      <h2 id="sección-diagrama de flujo">¿Qué es un diagrama de flujo?</h2>
+      <p>
+        El diagrama de flujo es la representación gráfica de un algoritmo. No
+        obstante, no solo se emplea en programación, sino en otras disciplinas
+        como economía, procesos industriales, psicología cognitiva o cualquier
+        disciplina en la que se tenga que representar un proceso.
+      </p>
+      <p>
+        El diagrama de flujo muestra los pasos del algoritmo como cajas de
+        distintas formas o colores (dependiendo de si son inputs, condiciones, o
+        outputs) y su orden mediante la conexión de las cajas con flechas.
+      </p>
+      <p>
+        Al ser una representación muy gráfica de un programa o algoritmo,
+        existen numerosos lenguajes de programación (siendo el más conocido
+        Scratch) que se basan en crear flujogramas, en vez de escribir líneas de
+        código. De esta forma programar se vuelve un proceso más gráfico y
+        esquemático, propiedades especialmente útiles para enseñar a programar a
+        niños o personas que acaban de empezar en la programación.
+      </p>
+
+      <h2 id="sección-lenguajes">Ejemplos de lenguaje de programación</h2>
+      <p>
+        Desde la creación del primer lenguaje de programación en 1957, se han
+        desarrollado cientos de lenguajes de programación, con comandos y
+        características únicas. No obstante, la mayoría de ellos simplemente han
+        desaparecido o han evolucionado a lenguajes más avanzados y modernos.
+      </p>
+
+      <h3>FORTRAN (FORmula TRANSlation)</h3>
+      <p>
+        Desarrollado entre 1954 y 1958, FORTRAN fue el primer lenguaje de
+        programación de la historia. La principal función de este lenguaje era
+        la de actuar como traductor a código máquina de fórmulas matemáticas que
+        expresaran cálculos. Increíblemente, FORTRAN se sigue empleando en el
+        ámbito científico, aunque es verdad que está muy superado. Actualmente,
+        es el decimonoveno lenguaje de programación más popular.
+      </p>
+
+      <h3>COBOL (COmmon Business Oriented Language)</h3>
+      <p>
+        Aunque fue desarrollado por el Departamento de Defensa de Estados Unidos
+        en 1959, COBOL fue tenía el objetivo de ser un lenguaje universal que
+        pudiera ser usado en cualquier ordenador, y que estuviera orientado
+        principalmente a los negocios, es decir; a la informática de gestión.
+      </p>
+      <p>
+        Al igual que lo que ocurre con FORTRAN, COBOL se sigue usando en la
+        actualidad, especialmente en ambientes financieros. Es actualmente el
+        vigésimo quinto lenguaje más popular.
+      </p>
+
+      <h3>BASIC (Beginners' All-purpose Symbolic Instruction Code)</h3>
+      <p>
+        En 1964 nace el Basic. Este lenguaje se diseñó desde el punto de vista
+        del usuario, es decir, se procuró que el lenguaje fuera fácil de
+        aprender y manejar. Este lenguaje tuvo bastante éxito en la enseñanza y
+        sobre todo, en la programación de los primeros microcomputadores, pero
+        apenas se llegó a utilizar en el ambiente profesional. Actualmente
+        existen versiones muy mejoradas de este lenguaje, como VisualBasic, que
+        es actualmente el sexto lenguaje más popular.
+      </p>
+
+      <h3>Pascal</h3>
+      <p>
+        El Pascal nació en torno a 1970, después de la crisis del software.
+        Diseñado por Niklaus Wirth con la idea de crear un lenguaje sencillo y
+        claro que permitiese afrontar la complejidad creciente de los programas
+        de la época. Es el primer lenguaje basado exclusivamente en la
+        programación estructurada, y gracias a su simplicidad ha sido el
+        lenguaje ideal sobre el que desarrollar la semántica de los lenguajes y
+        la verificación formal, cuyos inicios datan también de estos años.
+        Además el Pascal ha sido buen progenitor de posteriores lenguajes.
+      </p>
+      <p>
+        Actualmente este lenguaje está de desuso, habiendo versiones
+        evolucionadas de este, como es el caso de Object Pascal. Este lenguaje
+        incluye elementos pertenecientes al paradigma de la programación
+        orientada a objetos. Es actualmente el décimo cuarto lenguaje más
+        popular.
+      </p>
+
+      <h3>C, C++ y C#</h3>
+      <p>
+        Después del Pascal se desarrollaron multitud de lenguajes, entre ellos
+        el C en 1972, que a costa de un menor nivel de abstracción, aporta una
+        gran flexibilidad y control sobre los recursos de la máquina.
+      </p>
+      <p>
+        En 1979 (solo siete años después de la creación de C) nace C++, una
+        versión extendida de C que introdujo mecanismos que permiten la
+        manipulación de objetos.
+      </p>
+      <p>
+        Finalmente, en el año 2000 se creó C#, un lenguaje que deriva de los dos
+        anteriores e incluye mejoras derivadas de otros lenguajes como Java.
+      </p>
+      <p>
+        En la actualidad se siguen usando los 3 lenguajes, debido a que cada uno
+        de ellos está diseñado para un tipo distinto de programación. Además,
+        son de los lenguajes más populares actualmente, siendo C el segundo más
+        popular, C++ el cuarto, y C# el quinto.
+      </p>
+
+      <h3>Java</h3>
+      <p>
+        En 1995 se comercializó por primera vez Java, un lenguaje de
+        programación (y plataforma informática) orientado a objetos (como C++)
+        que fue creado con la intención de que los programas creados en este
+        lenguaje pudiesen funcionar en cualquier clase de hardware, siendo este
+        el axioma de Java: “write once, run anywhere” (escribe una sola vez,
+        ejecuta donde quieras).
+      </p>
+      <p>
+        Java se emplea en todo tipo de dispositivos (ordenadores, consolas,
+        móviles) y de programas (juegos, páginas web), siendo actualmente el
+        tercer lenguaje más popular.
+      </p>
+
+      <h3>JavaScript</h3>
+      <p>
+        JavaScript fue creado en 1995, y es actualmente una de las tecnologías
+        principales de la World Wide Web, junto a HTML y CSS. En torno al 97% de
+        las páginas web emplean JavaScript en el lado de los clientes,
+        implementado como una parte de un navegador web, permitiendo mejoras en
+        la interfaz de usuario y páginas web dinámicas.
+      </p>
+      <p>
+        Por estas razones, JavaScript es un lenguaje de programación muy
+        empleado, siendo el séptimo lenguaje más popular actualmente.
+      </p>
+
+      <h3>Python</h3>
+      <p>
+        Creado en 1991, Python es un lenguaje de programación cuya filosofía
+        hace hincapié en la legibilidad de su código. Es un lenguaje
+        multiparadigma, lo que permite varios estilos de programación:
+        programación orientada a objetos, programación imperativa, y
+        programación funcional.
+      </p>
+      <p>
+        En los últimos años ha ido ganando popularidad hasta ser actualmente el
+        lenguaje de programación más popular.
+      </p>
+
+      <h2 id="sección-programa">Ejemplo de programa: Calculadora en Python</h2>
+      <h3>¿En qué consiste el programa?</h3>
+      <p>
+        Es un programa que realiza operaciones aritméticas básicas. Se usa igual
+        que una calculadora tradicional: simplemente introduces los números y
+        los símbolos de las operaciones que quieres realizar, y este programa
+        calcula el resultado.
+      </p>
+      <p>
+        El programa consiste en un programa principal, y un programa que se
+        compone de módulos. Los módulos son funciones que se programan aparte
+        para evitar tener que escribir todos sus comandos cada vez que quieras
+        usarlas.
+      </p>
+
+      <h3>Programa principal</h3>
+      <pre>
+from formateador import main as formato
+
+operaciones = input("> ")
+operaciones = formato.ajuste_espacio_strings(operaciones)
+print(operaciones)
+cantidad_de_sumas_restas = operaciones.count("+") + operaciones.count("-")
+cantidad_de_multiplicaciones_divisiones = operaciones.count("/") + operaciones.count("*")
+cantidad_de_exponenciales = operaciones.count("^") + operaciones.count("R") #cambio de ** por ^ para mayor comodidad
+cantidad_de_operaciones = cantidad_de_sumas_restas + cantidad_de_multiplicaciones_divisiones + cantidad_de_exponenciales
+
+while cantidad_de_operaciones > 0:
+
+    if cantidad_de_exponenciales > 0:
+
+        if "R" in operaciones:  # raíz enésima
+            cantidad_de_operaciones -= 1
+            resultado = float(operaciones[operaciones.index("R") + 1]) ** (1 / float(
+                operaciones[operaciones.index("R") - 1]))
+            operaciones = formato.ajuste_caracteres_lista(operaciones, "R", resultado)
+
+        if "^" in operaciones:#se cambia el signo de la exponencial para mayor comodidad
+            cantidad_de_operaciones -= 1
+            resultado = float(operaciones[operaciones.index("^") - 1]) ** float(
+                operaciones[operaciones.index("^") + 1])
+            operaciones = formato.ajuste_caracteres_lista(operaciones, "^", resultado)
+
+    if cantidad_de_multiplicaciones_divisiones > 0:
+
+        if "/" in operaciones:
+            cantidad_de_operaciones -= 1
+            resultado = float(operaciones[operaciones.index("/") - 1]) / float(
+                operaciones[operaciones.index("/") + 1])
+            operaciones = formato.ajuste_caracteres_lista(operaciones, "/", resultado)
+
+        elif "*" in operaciones:
+            cantidad_de_operaciones -= 1
+            resultado = float(operaciones[operaciones.index("*") - 1]) * float(
+                operaciones[operaciones.index("*") + 1])
+            operaciones = formato.ajuste_caracteres_lista(operaciones, "*", resultado)
+
+    if cantidad_de_sumas_restas > 0:
+
+        if "+" in operaciones:
+            cantidad_de_operaciones -= 1
+            resultado = float(operaciones[operaciones.index("+") - 1]) + float(
+                operaciones[operaciones.index(
+                    "+") + 1])  # crea una variable resultado igual al número previo al operador más el número
+            # posterior al operador
+            operaciones = formato.ajuste_caracteres_lista(operaciones, "+", resultado)
+
+        elif "-" in operaciones:
+            cantidad_de_operaciones -= 1
+            resultado = float(operaciones[operaciones.index("-") - 1]) - float(
+                operaciones[operaciones.index("-") + 1])
+            operaciones = formato.ajuste_caracteres_lista(operaciones, "-", resultado)
+
+print(float(operaciones[0]))
+    </pre
+      >
+
+      <h3>Módulos</h3>
+      <pre>
+def ajuste_espacio_strings(operaciones):
+    operadores = ["+", "-", "*", "/", "**", "R"]
+    operaciones = operaciones.strip()
+    operaciones = operaciones.replace(" ", "")
+
+    for i in range(0, len(operadores)):
+        comando = str(operadores[i])
+        if "**" in operaciones:
+            operaciones = operaciones.replace("**",
+                                              " " + "^" + " ")  # se reemplaza el símbolo de exponencial para mayor
+            # comodidad del programa, porque si no generaba conflicto con la multiplicación
+
+        if comando in operaciones:
+            operaciones = operaciones.replace(comando, " " + comando + " ")
+    operaciones = operaciones.split()
+
+    return operaciones
+
+
+def ajuste_caracteres_lista(operaciones, operador, resultado):
+    del operaciones[operaciones.index(operador) - 1]  # elimina el número previo al operador
+    operaciones.insert(operaciones.index(operador),
+                       str(resultado))  # lo reemplaza por el resultado de la operación de antes
+    del operaciones[operaciones.index(operador): operaciones.index
+                                                 (operador) + 2]  # elimina el operador y el número posterior,
+    # dejando solo el resultado
+
+    return operaciones
+
+
+def valor_índice(operaciones, operador,
+                 salto):  # esta función devuelve el valor de la lista que está a una cantidad de saltos del operador
+
+    return float(operaciones[operaciones.index(operador) + salto])
+    </pre
+      >
+
+      <h2 id="sección-conclusión">Conclusión</h2>
+      <p>
+        La programación informática ha sido uno de los mayores avances en la
+        historia de la humanidad, ya que nos ha permitido exprimir al máximo el
+        enorme potencial de los ordenadores, y ha dado lugar a la creación de
+        algoritmos y lenguajes de programación sin los cuales nos sería
+        imposible tener el estilo de vida que seguimos actualmente.
+      </p>
+      <p>
+        Tal ha sido la influencia de la programación en nuestras vidas que con
+        solo echar un vistazo a nuestro alrededor nos podemos dar cuenta de que
+        estamos rodeados de algoritmos y de programas informáticos: móviles,
+        ordenadores, videojuegos, páginas web, aplicaciones móviles,
+        electrodomésticos inteligentes, vehículos, y un largo etcétera.
+      </p>
+      <div class="bloque-referencias">
+        <h2 id="sección-referencias" class="título-índice">Referencias</h2>
+        <p class="referencias">
+          Larousse. (1991). Algoritmo. Gran Enciclopedia Larousse. (3ª ed., Vol.
+          1, pp. 393). Barcelona: Editorial Planeta.
+        </p>
+
+        <p class="referencias">
+          <a
+            href="https://en.wikipedia.org/wiki/Computer_programming"
+            target="_blank"
+          >
+            https://en.wikipedia.org/wiki/Computer_programming
+          </a>
+        </p>
+
+        <p class="referencias">
+          <a
+            href="https://profile.es/blog/que-es-un-algoritmo-informatico/"
+            target="_blank"
+          >
+            https://profile.es/blog/que-es-un-algoritmo-informatico/
+          </a>
+        </p>
+
+        <p class="referencias">
+          <a href="https://es.wikipedia.org/wiki/Minimax" target="_blank">
+            https://es.wikipedia.org/wiki/Minimax
+          </a>
+        </p>
+
+        <p class="referencias">
+          <a href="https://es.wikipedia.org/wiki/PageRank" target="_blank">
+            https://es.wikipedia.org/wiki/PageRank
+          </a>
+        </p>
+
+        <p class="referencias">
+          <a
+            href="https://es.wikipedia.org/wiki/Algoritmo_de_compresi%C3%B3n_sin_p%C3%A9rdida"
+            target="_blank"
+          >
+            https://es.wikipedia.org/wiki/Algoritmo_de_compresi%C3%B3n_sin_p%C3%A9rdida
+          </a>
+        </p>
+
+        <p class="referencias">
+          <a
+            href="https://es.wikipedia.org/wiki/Algoritmo_de_compresi%C3%B3n_con_p%C3%A9rdida"
+            target="_blank"
+          >
+            https://es.wikipedia.org/wiki/Algoritmo_de_compresi%C3%B3n_con_p%C3%A9rdida
+          </a>
+        </p>
+
+        <p class="referencias">
+          <a
+            href="https://es.wikipedia.org/wiki/Formato_de_compresi%C3%B3n_ZIP"
+            target="_blank"
+          >
+            https://es.wikipedia.org/wiki/Formato_de_compresi%C3%B3n_ZIP
+          </a>
+        </p>
+
+        <p class="referencias">
+          <a href="https://es.wikipedia.org/wiki/7z" target="_blank">
+            https://es.wikipedia.org/wiki/7z
+          </a>
+        </p>
+
+        <p class="referencias">
+          <a href="https://es.wikipedia.org/wiki/RAR" target="_blank">
+            https://es.wikipedia.org/wiki/RAR
+          </a>
+        </p>
+
+        <p class="referencias">
+          <a
+            href="https://www.tuexperto.com/2019/09/27/archivos-zip-vs-7z-vs-rar-estas-son-todas-sus-diferencias/"
+            target="_blank"
+            >https://www.tuexperto.com/2019/09/27/archivos-zip-vs-7z-vs-rar-estas-son-todas-sus-diferencias/
+          </a>
+        </p>
+
+        <p class="referencias">
+          <a href="https://en.wikipedia.org/wiki/Flowchart" target="_blank">
+            https://en.wikipedia.org/wiki/Flowchart
+          </a>
+        </p>
+
+        <p class="referencias">
+          <a
+            href="https://informatica.uv.es/iiguia/AED/oldwww/2004_05/AED.Tema.02.pdf"
+            target="_blank"
+          >
+            https://informatica.uv.es/iiguia/AED/oldwww/2004_05/AED.Tema.02.pdf
+          </a>
+        </p>
+
+        <p class="referencias">
+          <a href="https://es.wikipedia.org/wiki/COBOL" target="_blank"
+            >https://es.wikipedia.org/wiki/COBOL
+          </a>
+        </p>
+
+        <p class="referencias">
+          <a href="https://en.wikipedia.org/wiki/JavaScript" target="_blank">
+            https://en.wikipedia.org/wiki/JavaScript
+          </a>
+        </p>
+
+        <p class="referencias">
+          <a href="https://es.wikipedia.org/wiki/Object_Pascal" target="_blank">
+            https://es.wikipedia.org/wiki/Object_Pascal
+          </a>
+        </p>
+
+        <p class="referencias">
+          <a href="https://www.tiobe.com/tiobe-index/" target="_blank"
+            >https://www.tiobe.com/tiobe-index/
+          </a>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
